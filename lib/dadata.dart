@@ -1,0 +1,1 @@
+export 'src/dadata_directive.dart';

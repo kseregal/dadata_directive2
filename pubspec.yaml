@@ -1,0 +1,16 @@
+name: dadata_directive2
+description: Директива dadata
+version: 0.0.1
+
+environment:
+  sdk: '>=1.24.0 <2.0.0'
+
+dependencies:
+  http: "^0.11.3+16"
+  angular: ^4.0.0
+  angular_components: ^0.8.0
+
+transformers:
+- angular
+
+
