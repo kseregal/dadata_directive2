@@ -1,6 +1,8 @@
 name: dadata_directive2
 description: Директива dadata
-version: 0.0.1
+version: 0.0.2
+author: Sergey Kablov <skablov@gmail.com>
+homepage: https://github.com/kseregal/dadata_directive2
 
 environment:
   sdk: '>=1.24.0 <2.0.0'

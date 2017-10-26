@@ -15,12 +15,13 @@
  <material-auto-suggest-input
   dadata="legal_entity"
   [gender]="gender"
-  dadata_delay="500"
-  dadata_token="ksdfjwoefjweoo"
+  dadata-delay="500"
+  dadata-token="ksdfjwoefjweoo"
 </material-auto-suggest-input>
 ```
   dadata="legal_entity" - в кавычках указываем возможные варианты использования подсказок
   * address - автоподсказка адресов.
+  * city - выбор города. 
   * surname - автоподсказка фамилий.
   * name - автоподсказка имен.
   * patronymic - автоподсказка отчеств.
@@ -71,7 +72,7 @@
 ```
 <material-auto-suggest-input
   ...
-  dadata_delay="500"
+  dadata-delay="500"
   ...
 </material-auto-suggest-input>
 ```
@@ -80,4 +81,6 @@
  пока пользователь стучит по клавиатуре.
  Если параметр не определен, то используется дефолтовое значение 500.
 
- * dadata_token - обязательный параетр. Содержит токен.
+ * dadata-token - обязательный параметр. Содержит токен авторизации на сервисе dadata.ru.
+ 
+ Бесплатно разрешено выполнять 1000 запросов в сутки.

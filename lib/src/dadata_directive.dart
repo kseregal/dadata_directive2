@@ -91,7 +91,7 @@ class DadataDirective {
 
   /// Список вариантов использованвия dadata, где
   /// учитывается местонахождение (геолокация до города).
-  List<String> useGeoLocationWith = const[ 'address', 'legal_entity', 'bank' ];
+  List<String> useGeoLocationWith = const[ 'address', 'legal_entity', 'bank', 'city' ];
 
   @Input("dadata-token")
   String token;
@@ -191,7 +191,8 @@ class DadataDirective {
         body: JSON.encode(requestBody))
         .then((response) {
       Map resBody = JSON.decode(response.body);
-      List<Map<String, String>> suggList =  resBody["suggestions"];
+      List<Map<String, dynamic>> suggList =  resBody["suggestions"];
+
       _suggestElem.options = new SelectionOptions([new OptionGroup(suggList)]);
     });
 
