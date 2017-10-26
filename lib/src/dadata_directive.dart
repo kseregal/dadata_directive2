@@ -93,7 +93,7 @@ class DadataDirective {
   /// учитывается местонахождение (геолокация до города).
   List<String> useGeoLocationWith = const[ 'address', 'legal_entity', 'bank' ];
 
-  @Input("dadata_token")
+  @Input("dadata-token")
   String token;
 
   /// Заголовки для работы с API dadata
@@ -108,7 +108,7 @@ class DadataDirective {
 
   }
 
-  @Input("dadata_delay")
+  @Input("dadata-delay")
   String delay;
 
   /// Пол. Определяется как свойство компонента.
@@ -152,6 +152,11 @@ class DadataDirective {
     switch (_queryType) {
       case 'address':
         url = "${_baseSuggestUrl}address";
+        break;
+      case 'city':
+        url = "${_baseSuggestUrl}address";
+        requestBody["from_bound"] = { "value": "city" };
+        requestBody["to_bound"] = { "value": "city" };
         break;
       case 'surname':
       case 'name':
