@@ -91,7 +91,7 @@ class DadataDirective {
 
   /// Список вариантов использованвия dadata, где
   /// учитывается местонахождение (геолокация до города).
-  List<String> useGeoLocationWith = const[ 'address', 'legal_entity', 'bank', 'city' ];
+  List<String> useGeoLocationWith = const[ 'address', 'legal_entity', 'bank', 'city', 'region' ];
 
   @Input("dadata-token")
   String token;
@@ -157,6 +157,11 @@ class DadataDirective {
         url = "${_baseSuggestUrl}address";
         requestBody["from_bound"] = { "value": "city" };
         requestBody["to_bound"] = { "value": "city" };
+        break;
+      case 'region':
+        url = "${_baseSuggestUrl}address";
+        requestBody["from_bound"] = { "value": "region" };
+        requestBody["to_bound"] = { "value": "region" };
         break;
       case 'surname':
       case 'name':
