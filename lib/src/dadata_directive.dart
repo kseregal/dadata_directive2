@@ -126,7 +126,7 @@ class DadataDirective {
   Timer _timer=null;
 
   startTimeout() {
-    delay = delay ?? 500;
+    delay = delay ?? '500';
     return new Timer(new Duration(milliseconds: int.parse(delay)), getSelectionOptions);
   }
 
